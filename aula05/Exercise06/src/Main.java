@@ -8,34 +8,29 @@ public class Main {
 
         p2.name = "Bowser";
         p2.isVillain = true;
-
-        Engine e1 = new Engine();
-        Engine e2 = new Engine();
-
-        e1.cylinderCapacity = "100";
-        e1.maxVelocity = 200;
-
-        e2.cylinderCapacity = "150";
-        e2.maxVelocity = 100;
-
+        
         Kart k1 = new Kart();
         Kart k2 = new Kart();
 
         k1.name = "Mario's kart";
         k1.pilot = p1;
-        k1.engine = e1;
+
+        k1.engine.cylinderCapacity = "100";
+        k1.engine.maxVelocity = 200;
 
         k2.name = "Bowser's kart";
         k2.pilot = p2;
-        k2.engine = e2;
+
+        k2.engine.cylinderCapacity = "150";
+        k2.engine.maxVelocity = 100;
 
         p1.useSuperPower();
         p2.useSuperPower();
 
         System.out.println();
 
-        e1.showInfo();
-        e2.showInfo();
+        k1.engine.showInfo();
+        k2.engine.showInfo();
 
         System.out.println();
 
